@@ -2,12 +2,14 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     display: flex;
 }
 
 .cell {
-    background: #000;
+    background: #fff;
     height: 40px;
     width: 40px;
 }
@@ -17,6 +19,10 @@ body {
     flex-wrap: wrap;
     height: 640px;
     width: 640px;
+}
+
+.active {
+    background-color: #000;
 }
 
 .cell:hover {
