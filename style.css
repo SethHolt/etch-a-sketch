@@ -8,6 +8,13 @@ body {
     display: flex;
 }
 
+button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .cell {
     background: #fff;
     height: 40px;
@@ -20,11 +27,3 @@ body {
     height: 640px;
     width: 640px;
 }
-
-.active {
-    background-color: #000;
-}
-
-/* .cell:hover {
-    background-color: #4a4;
-} */

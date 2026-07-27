@@ -1,6 +1,21 @@
 const grid = document.getElementById('container');
 
-for (let i = 0; i < 256; i++) {
+let gridSize = 16;
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    const input = parseInt(prompt('Size? : '));
+    if (!input || (input > 100)) return;
+    gridSize = input;
+    grid.innerHTML = '';
+    grid.style.height = `${gridSize * 40}px`
+    grid.style.width = `${gridSize * 40}px`
+    generateGrid(gridSize);
+    
+})
+
+function generateGrid(gridSize) {for (let i = 0; i < gridSize * gridSize; i++) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
     cell.addEventListener('mouseover', () => {
@@ -9,5 +24,8 @@ for (let i = 0; i < 256; i++) {
                                           ${Math.round(Math.random() * 255)}`;
     });
     grid.appendChild(cell);
+    }
+
 }
 
+generateGrid(gridSize);
